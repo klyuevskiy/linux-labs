@@ -1,5 +1,4 @@
-while [ "$choice" != "G" ]
-do
+while [ "$choice" != "G" ]; do
     echo "(A) Add"
     echo "(B) Subtract"
     echo "(C) Multiply"
@@ -12,30 +11,29 @@ do
     read choice
     choice=$(echo $choice | tr '[:lower:]' '[:upper:]')
 
-    if [[ "$choice" =~ ^[A-F] ]]
-    then
+    if [[ "$choice" =~ ^[A-F] ]]; then
         echo "Input two numbers:"
         read val1
         read val2
     fi
 
     case "$choice" in
-    "A" )
+    "A")
         echo "Add: $(($val1 + $val2))"
         ;;
-    "B" )
+    "B")
         echo "Subtract: $(($val1 - $val2))"
         ;;
-    "C" )
+    "C")
         echo "Multiply: $(($val1 * $val2))"
         ;;
-    "D" )
+    "D")
         echo "Divide: $(($val1 / $val2))"
         ;;
-    "E" )
+    "E")
         echo "Modulus: $(($val1 % $val2))"
         ;;
-    "F" )
+    "F")
         echo "Exponentiation: $(($val1 ** $val2))"
         ;;
     esac
