@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while [ "$choice" != "G" ]; do
     echo "(A) Add"
     echo "(B) Subtract"
@@ -6,8 +8,8 @@ while [ "$choice" != "G" ]; do
     echo "(E) Modulus"
     echo "(F) Exponentiation"
     echo "(G) Exit"
-    echo "Your choice:"
 
+    echo "Your choice:"
     read choice
     choice=$(echo $choice | tr '[:lower:]' '[:upper:]')
 
